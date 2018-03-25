@@ -1,18 +1,12 @@
 import React, { Component } from 'react'
-import Image from "../components/commons/image"
+import IndexPage from "../components/pages/index"
 
 export default class Index extends Component {
 
     render() {
-
-        const styles = {
-            width: "100px",
-            height: "100px"
-        }
-
         return (
-            <div id="index" style={styles}>
-                <Image depth={2} />
+            <div id="brandingpage-app">
+                <IndexPage />
             </div>
         )
     }
