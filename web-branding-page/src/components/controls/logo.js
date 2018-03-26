@@ -1,13 +1,14 @@
 import React from "react"
-import Shape from "../commons/shape"
-import ShapeContainer from "../commons/shape-container"
+import Control from "../commons/shape-container"
+import Image from "../controls/image"
+import Title from "../controls/title"
 
 const Logo = (props) => {
     return (
-        <ShapeContainer width="210px" height="64px" className="flex-row align-items-flex-center justify-content-flex-space-between">
-            <Shape type="ball" width="48px" height="48px" className="bg-depth-2" />
-            <Shape type="box" width="150px" height="32px" className="bg-depth-2" />
-        </ShapeContainer>
+        <Control width="210px" height="64px" className="flex-row align-items-flex-center">
+            <Image type="ball" depth="2" size="48px" className="margin-right-xs" />
+            <Title lenght="150px" depth="2" className="height-md" />
+        </Control>
     )
 }
 
