@@ -4,29 +4,38 @@ import "./shape.styl"
 
 const Shape = (props) => {
 
-    const Styles = {
-        width: props.size,
-        height: props.size
+    const Styles = props.type != "triangle" ? {
+        width: props.width,
+        height: props.height,
+    }:
+    {
+        width: 0,
+        height: 0,
+        borderLeftWidth: props.height,
+        borderRightWidth: props.height,
+        borderButtomWidth: props.width,
     }
 
     return (
         <div 
-            style={Styles}
-            className={`shape shape-${props.depth} shape-${props.type}`}>
+            className={`shape shape-${props.type} shape-depth${props.depth} ${props.className}`}
+            style={Styles}>
         </div>
     )
 }
 
 Shape.prototype = {
-    type: PropTypes.oneOf(["box", "ball"]),
+    type: PropTypes.oneOf(["box", "ball", "triangle"]),
     depth: PropTypes.oneOf(["1", "2", "3", "4", "5"]),
-    size: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string,
 }
 
 Shape.defaultProps = {
     type: "box",
     depth: "1",
-    size: "100px",
+    width: "100px",
+    height: "100px",
 }
 
 export default Shape
