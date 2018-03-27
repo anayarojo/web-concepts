@@ -1,18 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Control from "../commons/shape-container"
-import Title from "./title"
-import Text from "./text"
+import Title from "../controls/title"
+import TextGrup from "../controls/text-group"
+import Button from "../controls/button"
 
 const Article = (props) => {
     return (
-        <Control className="flex-column align-items-flex-stretch padding-xs">
-            <Title depth={props.titleDepth} />
-            <Text with="100%" depth={props.textDepth} />
-            <Text with="100%" depth={props.textDepth} />
-            <Text with="100%" depth={props.textDepth} />
-            <Text with="70%" depth={props.textDepth} />
-            <Text with="50%" depth={props.textDepth} />
+        <Control width="100%" height="auto" className="flex-column align-items-flex-stretch padding-xs">
+            <Title width={props.titleWidth} depth={props.titleDepth} />
+            <TextGrup depth={props.textDepth} size={props.textSize} />
+            <Button width="100px" depth="5" />
         </Control>
     )
 }
@@ -20,15 +18,15 @@ const Article = (props) => {
 Article.prototype = {
     titleDepth: PropTypes.number,
     textDepth: PropTypes.number,
-    width: PropTypes.string,
-    className: PropTypes.string,
+    titleWidth: PropTypes.string,
+    textSize: PropTypes.number,
 }
 
 Article.defaultProps = {
     titleDepth: 3,
     textDepth: 2,
-    width: "300px",
-    className: "",
+    titleWidth: "300px",
+    textSize: 1,
 }
 
 export default Article

@@ -4,20 +4,18 @@ import Shape from "../commons/shape"
 
 const Text = (props) => {
     return (
-        <Shape type="box" width={props.lenght} height="14px" className={`bg-depth-${props.depth} ${props.className}`} />
+        <Shape type="box" width={props.lenght} height="14px" className={`bg-depth-${props.depth} ${props.className} margin-top-xs margin-bottom-xs`} />
     )
 }
 
-Title.prototype = {
+Text.prototype = {
     depth: PropTypes.number,
     lenght: PropTypes.string,
-    className: PropTypes.string,
 }
 
-Title.defaultProps = {
+Text.defaultProps = {
     depth: 2,
     lenght: "100px",
-    className: "",
 }
 
 export default Text

@@ -4,20 +4,18 @@ import Shape from "../commons/shape"
 
 const Title = (props) => {
     return (
-        <Shape type="box" width={props.lenght} height="20px" className={`bg-depth-${props.depth} ${props.className}`} />
+        <Shape type="box" width={props.width} height="20px" className={`bg-depth-${props.depth} ${props.className} margin-top-sm margin-bottom-sm`} />
     )
 }
 
 Title.prototype = {
     depth: PropTypes.number,
-    lenght: PropTypes.string,
-    className: PropTypes.string,
+    width: PropTypes.string,
 }
 
 Title.defaultProps = {
     depth: 2,
-    lenght: "100px",
-    className: "",
+    width: "100px",
 }
 
 export default Title
