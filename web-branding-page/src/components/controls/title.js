@@ -4,7 +4,7 @@ import Shape from "../commons/shape"
 
 const Title = (props) => {
     return (
-        <Shape type="box" width={props.width} height="20px" className={`bg-depth-${props.depth} ${props.className} margin-top-sm margin-bottom-sm`} />
+        <Shape type="box" width={props.width} height="32px" depth={props.depth} className={`${props.className} margin-top-sm margin-bottom-sm`} />
     )
 }
 

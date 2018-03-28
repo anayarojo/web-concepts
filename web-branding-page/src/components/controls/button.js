@@ -4,7 +4,7 @@ import Shape from "../commons/shape"
 
 const Button = (props) => {
     return (
-        <Shape type="box" width={props.lenght} height="32px" className={`bg-depth-${props.depth} ${props.className}`} />
+        <Shape type="box" width={props.width} height="64px" depth={props.depth} className={`${props.className}`} />
     )
 }
 
@@ -16,7 +16,7 @@ Button.prototype = {
 
 Button.defaultProps = {
     depth: 2,
-    width: "100px",
+    width: "128px",
     className: "",
 }
 

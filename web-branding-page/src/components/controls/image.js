@@ -5,7 +5,7 @@ import ShapeContainer from "../commons/shape-container"
 
 const Image = (props) => {
     return (
-        <Shape type={props.type} width={props.size} height={props.size} className={`bg-depth-${props.depth} ${props.className}`} />
+        <Shape type={props.type} width={props.size} height={props.size} depth={props.depth} className={`${props.className}`} />
     )
 }
 

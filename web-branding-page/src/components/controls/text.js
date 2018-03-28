@@ -4,7 +4,13 @@ import Shape from "../commons/shape"
 
 const Text = (props) => {
     return (
-        <Shape type="box" width={props.lenght} height="14px" className={`bg-depth-${props.depth} ${props.className} margin-top-xs margin-bottom-xs`} />
+        <Shape
+            type="box"
+            width={props.lenght}
+            height="16px"
+            depth={props.depth}
+            className={`${props.className} margin-top-xs margin-bottom-xs`}
+        />
     )
 }
 

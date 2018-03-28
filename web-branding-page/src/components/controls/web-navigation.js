@@ -1,18 +1,18 @@
 import React from "react"
-import Shape from "../commons/shape"
-import ShapeContainer from "../commons/shape-container"
+import Control from "../commons/shape-container"
+import Text from "../controls/text"
 
 const WebNavigation = (props) => {
     return (
-        <ShapeContainer width="500px" height="64px" className={`flex-row align-items-flex-center ${props.className}`}>
+        <Control width="500px" height="64px" className={`flex-row align-items-flex-center ${props.className}`}>
             {
                 props.menu.map((index, item) => {
                     return (
-                        <Shape type="box" width="90px" height="16px" className="bg-depth-2 margin-left-xs margin-right-xs" />
+                        <Text key={index} width="90px" depth={2} className="margin-left-xs margin-right-xs" />
                     )
                 })
             }
-        </ShapeContainer>
+        </Control>
     )
 }
 

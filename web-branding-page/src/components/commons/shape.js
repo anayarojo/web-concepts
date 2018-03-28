@@ -18,7 +18,7 @@ const Shape = (props) => {
 
     return (
         <div 
-            className={`shape shape-${props.type} shape-depth${props.depth} ${props.className}`}
+            className={`shape shape-${props.type} shape-depth-${props.depth} ${props.className}`}
             style={Styles}>
         </div>
     )
