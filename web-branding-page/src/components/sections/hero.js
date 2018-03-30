@@ -9,7 +9,7 @@ const Hero = (props) => {
 
     return (
         <BoxContainer width="100%" height="auto" className="bg-depth-4 padding-top-md padding-bottom-md">
-            <Container className="flex-row align-items-flex-stretch justify-content-flex-space-between">
+            <Container className="flex-row flex-wrap-reverse align-items-flex-stretch justify-content-flex-space-between">
                 <BoxContainer width="auto" height="auto" className="flex-basis-600">
                     <Article titleDepth={1} textDepth={2} textSize={2}  />
                 </BoxContainer>

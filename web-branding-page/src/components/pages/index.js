@@ -3,6 +3,7 @@ import Navigation from "../sections/navigation"
 import Hero from "../sections/hero"
 import Product from "../sections/product"
 import Feactures from "../sections/feactures"
+import RelatedProducts from "../sections/related-products"
 import "./index.styl"
 
 const Index = (props) => {
@@ -13,6 +14,7 @@ const Index = (props) => {
             <Hero /> 
             <Product />
             <Feactures />
+            <RelatedProducts />
         </div>
     )
 }

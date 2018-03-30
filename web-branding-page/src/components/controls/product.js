@@ -5,13 +5,13 @@ import Image from "../controls/image"
 import Image3d from "../controls/image-3d"
 import Article from "../controls/article"
 
-const Feacture = (props) => {
+const Product = (props) => {
     return (
         <Control width="100%" height="auto" className={`flex-column align-items-flex-center justify-content-flex-center ${props.className}`}>
-            <Image3d type="ball" size="100px" depth={props.depth} className="margin-center" />
+            <Image3d type="Product" size="150px" depth={props.depth} className="margin-center" />
             <Article titleDepth={props.depth} textDepth={props.depth-1} />
         </Control>
     )
 }
 
-export default Feacture
+export default Product
