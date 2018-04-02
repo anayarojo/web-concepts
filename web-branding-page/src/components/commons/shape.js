@@ -11,9 +11,9 @@ const Shape = (props) => {
     {
         width: 0,
         height: 0,
-        borderLeftWidth: props.height,
-        borderRightWidth: props.height,
-        borderButtomWidth: props.width,
+        borderLeftWidth: `calc(${props.height}/2)`,
+        borderRightWidth: `calc(${props.height}/2)`,
+        borderBottomWidth: props.width,
     }
 
     return (

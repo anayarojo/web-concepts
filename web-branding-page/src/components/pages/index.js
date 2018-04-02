@@ -5,6 +5,7 @@ import Product from "../sections/product"
 import Feactures from "../sections/feactures"
 import RelatedProducts from "../sections/related-products"
 import Plans from "../sections/plans"
+import Clients from "../sections/clients"
 import "./index.styl"
 
 const Index = (props) => {
@@ -17,6 +18,7 @@ const Index = (props) => {
             <Feactures />
             <RelatedProducts />
             <Plans />
+            <Clients />
         </div>
     )
 }
