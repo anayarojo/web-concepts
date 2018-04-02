@@ -10,12 +10,12 @@ const TextGroup = (props) => {
 
     for(var i = 0; i < props.size; i++){
         result.push(
-            <Control width="100%" height="auto" className={`flex-column align-items-flex-stretch margin-top-sm margin-bottom-sm ${props.className}`}>
-                <Text lenght="100%" depth={props.depth} />
-                <Text lenght="100%" depth={props.depth} />
-                <Text lenght="100%" depth={props.depth} />
-                <Text lenght="70%" depth={props.depth} />
-                <Text lenght="50%" depth={props.depth} />
+            <Control key={`text-group-${i}`} width="100%" height="auto" className={`flex-column align-items-flex-stretch margin-top-sm margin-bottom-sm ${props.className}`}>
+                <Text key={`text-1-${i}`} width="100%" depth={props.depth} />
+                <Text key={`text-2-${i}`} width="100%" depth={props.depth} />
+                <Text key={`text-3-${i}`} width="100%" depth={props.depth} />
+                <Text key={`text-4-${i}`} width="70%" depth={props.depth} />
+                <Text key={`text-5-${i}`} width="50%" depth={props.depth} />
             </Control>
         )
     }

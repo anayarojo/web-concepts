@@ -10,7 +10,7 @@ const Button = (props) => {
 
 Button.prototype = {
     depth: PropTypes.number,
-    lenght: PropTypes.string,
+    width: PropTypes.string,
     className: PropTypes.string,
 }
 

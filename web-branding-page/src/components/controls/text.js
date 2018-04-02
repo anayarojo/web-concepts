@@ -6,7 +6,7 @@ const Text = (props) => {
     return (
         <Shape
             type="box"
-            width={props.lenght}
+            width={props.width}
             height="16px"
             depth={props.depth}
             className={`${props.className} margin-top-xs margin-bottom-xs`}
@@ -16,12 +16,12 @@ const Text = (props) => {
 
 Text.prototype = {
     depth: PropTypes.number,
-    lenght: PropTypes.string,
+    width: PropTypes.string,
 }
 
 Text.defaultProps = {
     depth: 2,
-    lenght: "100px",
+    width: "100px",
 }
 
 export default Text

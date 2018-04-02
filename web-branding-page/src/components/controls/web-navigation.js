@@ -8,7 +8,7 @@ const WebNavigation = (props) => {
             {
                 props.menu.map((index, item) => {
                     return (
-                        <Text key={index} width="90px" depth={2} className="margin-left-xs margin-right-xs" />
+                        <Text key={index} width="90px" depth={3} className="margin-left-xs margin-right-xs" />
                     )
                 })
             }

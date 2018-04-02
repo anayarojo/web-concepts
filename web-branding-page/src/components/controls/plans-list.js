@@ -2,16 +2,16 @@ import React from "react"
 import BoxContainer from "../commons/shape-container"
 import Container from "../commons/container"
 import Title from "../controls/title"
-import Product from "../controls/product"
+import Plan from "../controls/plan"
 
-const ProductsList = (props) => {
+const PlansList = (props) => {
     return (
             <BoxContainer width="100%" height="auto" className="flex-row align-items-flex-center justify-content-flex-space-around flex-wrap">
             {
-                props.products.map((index, item) =>{
+                props.plans.map((index, item) =>{
                     return(
-                        <BoxContainer key={`product-container-${index}`} width="auto" height="auto" className="flex-basis-200 padding-sm">
-                            <Product key={`product-${index}`} depth={4} className="margin-top-sm margin-bottom-sm" />
+                        <BoxContainer key={`plan-container-${index}`} width="auto" height="auto" className="flex-basis-300">
+                            <Plan key={`plan-${index}`} className="margin-top-sm margin-bottom-sm" />
                         </BoxContainer>
                     )
                 })
@@ -20,4 +20,4 @@ const ProductsList = (props) => {
     )
 }
 
-export default ProductsList
+export default PlansList
