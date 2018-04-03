@@ -6,6 +6,8 @@ import Feactures from "../sections/feactures"
 import RelatedProducts from "../sections/related-products"
 import Plans from "../sections/plans"
 import Clients from "../sections/clients"
+import Contact from "../sections/contact"
+import Footer from "../sections/footer"
 import "./index.styl"
 
 const Index = (props) => {
@@ -19,6 +21,8 @@ const Index = (props) => {
             <RelatedProducts />
             <Plans />
             <Clients />
+            <Contact />
+            <Footer />
         </div>
     )
 }

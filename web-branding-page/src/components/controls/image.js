@@ -5,21 +5,21 @@ import ShapeContainer from "../commons/shape-container"
 
 const Image = (props) => {
     return (
-        <Shape type={props.type} width={props.size} height={props.size} depth={props.depth} className={`${props.className}`} />
+        <Shape type={props.type} width={`${props.size}px`} height={`${props.size}px`} depth={props.depth} className={`${props.className}`} />
     )
 }
 
 Image.prototype = {
     type: PropTypes.oneOf(["box", "ball", "triangle"]),
     depth: PropTypes.number,
-    size: PropTypes.string,
+    size: PropTypes.number,
     className: PropTypes.string,
 }
 
 Image.defaultProps = {
     type: "box",
     depth: 2,
-    size: "100px",
+    size: 100,
     className: "",
 }
 

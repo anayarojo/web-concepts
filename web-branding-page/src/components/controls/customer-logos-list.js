@@ -8,8 +8,8 @@ const CustomerLogosList = (props) => {
             {
                 props.logos.map((logo, index) => {
                     return (
-                        <BoxContainer key={`customer-logo-${index}`} width="auto" height="auto" className="flex-basis-300">
-                            <Image3d key={`customer-logo-${index}`} type={logo} depth={2} className="margin-center" />
+                        <BoxContainer key={`customer-logo-${index}`} width="auto" height="auto" className="flex-basis-100">
+                            <Image3d key={`customer-logo-${index}`} type={logo} depth={2} size={100} className="margin-center" />
                         </BoxContainer>
                     )
                 })

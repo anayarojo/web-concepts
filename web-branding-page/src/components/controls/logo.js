@@ -6,7 +6,7 @@ import Title from "../controls/title"
 const Logo = (props) => {
     return (
         <Control width="210px" height="64px" className="flex-row align-items-flex-center">
-            <Image type="ball" depth={4} size="48px" className="margin-right-xs" />
+            <Image type="ball" depth={4} size={48} className="margin-right-xs" />
             <Title lenght="150px" depth={4} className="height-md" />
         </Control>
     )

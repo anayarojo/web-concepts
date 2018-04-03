@@ -12,7 +12,7 @@ const Plan = (props) => {
         <Control width="auto" height="auto" className={`flex-column align-items-flex-center justify-content-flex-space-around bg-depth-0 padding-sm ${props.className}`}>
             <Title width="70%" depth={2} className="margin-center" />
             <Text width="30%" depth={1} className="margin-center" />
-            <Image type="ball" depth={1} size="150px" className="margin-center" />
+            <Image type="ball" depth={1} size={150} className="margin-center" />
             <TextGroup size={2} depth={1} />
             <Button depth={2} className="margin-center"  />
         </Control>
