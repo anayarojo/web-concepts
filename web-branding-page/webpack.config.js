@@ -54,6 +54,29 @@ module.exports = (env) => {
                     })
                 },
                 {
+                    test: /\.styl$/,
+                    use: ExtractTextPlugin.extract({
+                        fallback: "style-loader",
+                        use: [
+                            "css-loader",
+                            {
+                                loader: "stylus-loader",
+                                options: {
+                                    use: [
+                                        require("nib"),
+                                        require("rupture")
+                                    ],
+                                    import: [
+                                        "~nib/lib/nib/index.styl",
+                                        "~rupture/rupture/index.styl",
+                                    ],
+                                    minimize: true,
+                                }
+                            }
+                        ]
+                    })
+                },
+                {
                     test: /\.(jpg|png|gif|svg)$/,
                     use: {
                         loader: 'url-loader',
