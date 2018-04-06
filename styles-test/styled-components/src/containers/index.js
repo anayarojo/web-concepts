@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import IndexPage from "../components/pages/index"
+import OutsetBox from "../components/outset-box"
 
 export default class Index extends Component {
 
@@ -53,7 +53,7 @@ export default class Index extends Component {
     render() {
         return (
             <div id="brandingpage-app">
-                <IndexPage />
+                <OutsetBox />
             </div>
         )
     }
