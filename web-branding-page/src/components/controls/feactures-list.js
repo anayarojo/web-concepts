@@ -11,7 +11,7 @@ const FeacturesList = (props) => {
                 props.feactures.map((index, item) =>{
                     return(
                         <BoxContainer key={`feacture-container-${index}`} width="auto" height="auto" className="flex-basis-200 padding-sm">
-                            <Feacture key={`feacture-${index}`} depth={4} className="margin-top-sm margin-bottom-sm" />
+                            <Feacture key={`feacture-${index}`} depth={4} className="padding-top-sm padding-bottom-sm padding-left-xs padding-right-xs hover-box-shadow-2" />
                         </BoxContainer>
                     )
                 })
