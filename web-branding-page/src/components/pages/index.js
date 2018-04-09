@@ -9,6 +9,7 @@ import Clients from "../sections/clients"
 import Contact from "../sections/contact"
 import Footer from "../sections/footer"
 import "./index.styl"
+import "../commons/animate.css"
 
 const Index = (props) => {
 

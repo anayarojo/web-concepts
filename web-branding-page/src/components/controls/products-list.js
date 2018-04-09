@@ -11,7 +11,7 @@ const ProductsList = (props) => {
                 props.products.map((index, item) =>{
                     return(
                         <BoxContainer key={`product-container-${index}`} width="auto" height="auto" className="flex-basis-200 padding-sm">
-                            <Product key={`product-${index}`} depth={3} className="margin-top-sm margin-bottom-sm" />
+                            <Product key={`product-${index}`} depth={3} className="padding-top-sm padding-bottom-sm padding-left-xs padding-right-xs hover-box-shadow-2" />
                         </BoxContainer>
                     )
                 })

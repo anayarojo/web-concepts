@@ -35,6 +35,17 @@ export default class Index extends Component {
         })
     }
 
+    animate = (element, animation) => {
+
+        element.classList.remove("animated")
+        element.classList.remove(animation)
+
+        void element.offsetWidth
+
+        element.classList.add("animated")
+        element.classList.add(animation)
+    }
+
     componentDidMount() {
         if (location.hash) {
             this.paddingHash()
