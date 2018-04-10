@@ -11,7 +11,7 @@ const PlansList = (props) => {
                 props.plans.map((index, item) =>{
                     return(
                         <BoxContainer key={`plan-container-${index}`} width="auto" height="auto" className="flex-basis-300">
-                            <Plan key={`plan-${index}`} className="margin-top-sm margin-bottom-sm hover-box-shadow-2 hover-transform-scale-1.1" />
+                            <Plan key={`plan-${index}`} className="margin-top-sm margin-bottom-sm hover-card-4 default-transition" />
                         </BoxContainer>
                     )
                 })

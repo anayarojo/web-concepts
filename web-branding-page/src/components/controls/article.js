@@ -7,7 +7,7 @@ import Button from "../controls/button"
 
 const Article = (props) => {
     return (
-        <Control width="100%" height="auto" className="flex-column align-items-flex-stretch padding-xs">
+        <Control width="100%" height="auto" className="flex-column align-items-flex-stretch">
             <Title width={props.titleWidth} depth={props.titleDepth} />
             <TextGrup depth={props.textDepth} size={props.textSize} />
             <Button width="128px" depth={5} />

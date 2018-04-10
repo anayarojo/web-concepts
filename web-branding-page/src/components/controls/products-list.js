@@ -10,8 +10,8 @@ const ProductsList = (props) => {
             {
                 props.products.map((index, item) =>{
                     return(
-                        <BoxContainer key={`product-container-${index}`} width="auto" height="auto" className="flex-basis-200 padding-sm">
-                            <Product key={`product-${index}`} depth={3} className="padding-top-sm padding-bottom-sm padding-left-xs padding-right-xs hover-box-shadow-2" />
+                        <BoxContainer key={`product-container-${index}`} width="auto" height="auto" className="flex-basis-200">
+                            <Product key={`product-${index}`} depth={3} className="padding-top-md padding-bottom-md padding-left-sm padding-right-sm hover-bg-depth-0 hover-card-3 default-transition" />
                         </BoxContainer>
                     )
                 })

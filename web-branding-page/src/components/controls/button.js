@@ -4,7 +4,7 @@ import Shape from "../commons/shape"
 
 const Button = (props) => {
     return (
-        <Shape type="box" width={props.width} height="64px" depth={props.depth} className={`hover-box-shadow-4 ${props.className}`} />
+        <Shape type="box" width={props.width} height="64px" depth={props.depth} className={`hover-card-3 default-transition ${props.className}`} />
     )
 }
 

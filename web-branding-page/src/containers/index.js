@@ -6,8 +6,7 @@ export default class Index extends Component {
     state = {
         headerFixed: false,
         openedMenu: false,
-        siteWidth: window.innerWidth,
-        siteHeight: window.innerHeight,
+        mobile: false,
     }
 
     paddingHash = () => {
@@ -23,10 +22,16 @@ export default class Index extends Component {
     }
 
     handleResize = () => {
-        this.setState({
-            siteWidth: window.innerWidth,
-            siteHeight: window.innerHeight,
-        })
+        if (window.innerWidth <= 768 && !this.state.mobile){
+            this.setState({
+                mobile: true
+            })
+        }
+        else if(this.state.mobile){
+            this.setState({
+                mobile: false
+            })
+        }
     }
 
     handleToggleMenu = () => {
@@ -64,7 +69,7 @@ export default class Index extends Component {
     render() {
         return (
             <div id="brandingpage-app">
-                <IndexPage />
+                <IndexPage state={this.state} />
             </div>
         )
     }

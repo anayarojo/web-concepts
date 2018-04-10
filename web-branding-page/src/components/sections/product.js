@@ -9,7 +9,7 @@ const Product = (props) => {
 
     return (
         <BoxContainer width="100%" height="auto" className="bg-depth-1 padding-top-md padding-bottom-md">
-            <Container className="flex-row flex-wrap align-items-flex-stretch justify-content-flex-center">
+            <Container className={`flex-row flex-wrap align-items-flex-stretch ${props.mobile ? "justify-content-flex-space-between" : "justify-content-flex-center"}`}>
                 <BoxContainer width="auto" height="auto" className="flex-basis-400 flex-row align-items-flex-center justify-content-flex-space-around">
                     <Image3d size={300} depth={2} />
                 </BoxContainer>

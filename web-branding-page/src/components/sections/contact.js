@@ -9,7 +9,7 @@ const Contact = (props) => {
     return (
         <BoxContainer width="100%" height="auto" className="bg-depth-2 padding-top-md padding-bottom-md">
             <Container className="flex-row align-items-flex-stretch justify-content-flex-center flex-wrap-reverse">
-                <BoxContainer width="auto" height="auto" className="image-a flex-basis-600">
+                <BoxContainer width="auto" height="auto" className="flex-basis-600">
                     <ContactForm titleDepth={4} titleWidth="300px" />
                 </BoxContainer>
                 <BoxContainer width="auto" height="auto" className="flex-basis-400 flex-row align-items-flex-center justify-content-flex-center">

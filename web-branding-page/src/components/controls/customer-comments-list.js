@@ -9,7 +9,7 @@ const CustomerCommentsList = (props) => {
                 props.comments.map((index, item) => {
                     return (
                         <BoxContainer key={`customer-comment-${index}`} width="auto" height="auto" className="flex-basis-300">
-                            <CustomerComment key={`customer-comment-${index}`} depth={4} className="padding-top-sm padding-bottom-sm padding-left-xs padding-right-xs hover-box-shadow-2" />
+                            <CustomerComment key={`customer-comment-${index}`} depth={4} className="padding-top-sm padding-bottom-sm padding-left-xs padding-right-xs hover-card-3 default-transition" />
                         </BoxContainer>
                     )
                 })

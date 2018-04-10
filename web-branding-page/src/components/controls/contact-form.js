@@ -9,7 +9,7 @@ import Button from "../controls/button"
 
 const ContactForm = (props) => {
     return (
-        <Control width="100%" height="auto" className="flex-column align-items-flex-stretch padding-xs">
+        <Control width="100%" height="auto" className="flex-column align-items-flex-stretch">
             <Title width={props.titleWidth} depth={props.titleDepth} />
             <Text width="100px" depth={3} />
             <Field width="95%" depth={1} />

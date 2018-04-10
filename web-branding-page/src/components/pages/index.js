@@ -15,15 +15,15 @@ const Index = (props) => {
 
     return (
         <div className="index-page">
-            <Navigation />
-            <Hero /> 
-            <Product />
-            <Feactures />
-            <RelatedProducts />
-            <Plans />
-            <Clients />
-            <Contact />
-            <Footer />
+            <Navigation headerFixed={props.state.headerFixed} mobile={props.state.mobile} />
+            <Hero mobile={props.state.mobile} /> 
+            <Product mobile={props.state.mobile} />
+            <Feactures mobile={props.state.mobile} />
+            <RelatedProducts mobile={props.state.mobile} />
+            <Plans mobile={props.state.mobile} />
+            <Clients mobile={props.state.mobile} />
+            <Contact mobile={props.state.mobile} />
+            <Footer mobile={props.state.mobile} />
         </div>
     )
 }
