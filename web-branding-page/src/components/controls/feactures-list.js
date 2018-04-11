@@ -6,7 +6,7 @@ import Feacture from "../controls/feacture"
 
 const FeacturesList = (props) => {
     return (
-            <BoxContainer width="100%" height="auto" className="flex-row align-items-flex-center justify-content-flex-space-around flex-wrap">
+        <BoxContainer width="100%" height="auto" className={`flex-row flex-wrap align-items-flex-center ${props.mobile ? "justify-content-flex-space-around" : "justify-content-flex-space-between"}`}>
             {
                 props.feactures.map((index, item) =>{
                     return(

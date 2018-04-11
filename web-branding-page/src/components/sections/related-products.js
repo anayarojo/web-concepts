@@ -11,10 +11,10 @@ const RelatedProducts = (props) => {
 
     return (
         <BoxContainer width="100%" height="auto" className="bg-depth-1 padding-top-md padding-bottom-md">
-            <Container className="flex-column align-items-flex-stretch justify-content-flex-center">
+            <Container className={`flex-column align-items-flex-stretch ${props.mobile ? "justify-content-flex-center" : "justify-content-flex-space-between"}`}>
                 <Title width="300px" depth={4} className="margin-center" />
                 <BoxContainer width="auto" height="auto" className="flex-row flex-wrap">
-                    <ProductList products={items} />
+                    <ProductList mobile={props.mobile} products={items} />
                 </BoxContainer>
             </Container>
         </BoxContainer>

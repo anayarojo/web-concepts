@@ -6,7 +6,7 @@ import Product from "../controls/product"
 
 const ProductsList = (props) => {
     return (
-            <BoxContainer width="100%" height="auto" className="flex-row align-items-flex-center justify-content-flex-space-around flex-wrap">
+        <BoxContainer width="100%" height="auto" className={`flex-row flex-wrap align-items-flex-center ${props.mobile ? "justify-content-flex-space-around" : "justify-content-flex-space-between" }`}>
             {
                 props.products.map((index, item) =>{
                     return(

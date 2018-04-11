@@ -8,7 +8,7 @@ const Contact = (props) => {
 
     return (
         <BoxContainer width="100%" height="auto" className="bg-depth-2 padding-top-md padding-bottom-md">
-            <Container className="flex-row align-items-flex-stretch justify-content-flex-center flex-wrap-reverse">
+            <Container className={`flex-row flex-wrap-reverse align-items-flex-stretch ${props.mobile ? "justify-content-flex-center" : "justify-content-flex-space-between"}`}>
                 <BoxContainer width="auto" height="auto" className="flex-basis-600">
                     <ContactForm titleDepth={4} titleWidth="300px" />
                 </BoxContainer>

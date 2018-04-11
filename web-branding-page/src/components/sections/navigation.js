@@ -16,9 +16,9 @@ const Navigation = (props) => {
                 <Logo />
                 {
                     props.mobile ?
-                    <WebNavigation menu={items} />
-                    :
                     <MobileNavigation menu={items} />
+                    :
+                    <WebNavigation menu={items} />
                 }
             </Container>
         </ShapeContainer>

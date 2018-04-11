@@ -17,13 +17,13 @@ const Clients = (props) => {
                     <Title width="300px" depth={3} className="margin-center" />
                 </BoxContainer>
                 <BoxContainer width="auto" height="auto" className="flex-row flex-wrap margin-top-md margin-bottom-md">
-                    <CustomerCommentsList comments={comments} />
+                    <CustomerCommentsList mobile={props.mobile} comments={comments} />
                 </BoxContainer>
                 <BoxContainer width="auto" height="auto" className="margin-top-md margin-bottom-md">
                     <Title width="300px" depth={3} className="margin-center" />
                 </BoxContainer>
                 <BoxContainer width="auto" height="auto" className="flex-row flex-wrap margin-top-md margin-bottom-md">
-                    <CustomerLogosList logos={logos} />
+                    <CustomerLogosList mobile={props.mobile} logos={logos} />
                 </BoxContainer>
             </Container>
         </BoxContainer>

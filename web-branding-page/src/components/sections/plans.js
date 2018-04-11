@@ -13,7 +13,7 @@ const Plans = (props) => {
             <Container className="flex-column align-items-flex-stretch justify-content-flex-center">
                 <Title width="300px" depth={4} className="margin-center" />
                 <BoxContainer width="auto" height="auto" className="flex-row flex-wrap">
-                    <PlansList plans={items} />
+                    <PlansList mobile={props.mobile} plans={items} />
                 </BoxContainer>
             </Container>
         </BoxContainer>

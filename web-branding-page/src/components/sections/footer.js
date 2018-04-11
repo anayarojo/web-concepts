@@ -16,7 +16,7 @@ const Footer = (props) => {
                     <Title width="300px" depth={1} className="margin-center" />
                 </BoxContainer>
                 <BoxContainer width="auto" height="auto" className="flex-row flex-wrap">
-                    <LinksList links={links} />
+                    <LinksList mobile={props.mobile} links={links} />
                 </BoxContainer>
                 <BoxContainer width="auto" height="auto" className="margin-top-md margin-bottom-xs">
                     <Text width="200px" depth={3} className="margin-center" />

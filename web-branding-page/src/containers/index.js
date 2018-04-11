@@ -22,15 +22,19 @@ export default class Index extends Component {
     }
 
     handleResize = () => {
-        if (window.innerWidth <= 768 && !this.state.mobile){
-            this.setState({
-                mobile: true
-            })
+        if (window.innerWidth <= 768){
+            if(!this.state.mobile){
+                this.setState({
+                    mobile: true
+                })
+            }
         }
-        else if(this.state.mobile){
-            this.setState({
-                mobile: false
-            })
+        else {
+            if (this.state.mobile){
+                this.setState({
+                    mobile: false
+                })
+            }
         }
     }
 

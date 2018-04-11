@@ -9,7 +9,7 @@ const Field = (props) => {
             width={props.width}
             height="128px"
             depth={props.depth}
-            className={`margin-top-xs margin-bottom-xs ${props.className} `}
+            className={`hover-bg-depth-0 margin-top-xs margin-bottom-xs ${props.className} `}
         />
     )
 }
