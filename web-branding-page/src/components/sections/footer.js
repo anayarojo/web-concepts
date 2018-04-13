@@ -10,7 +10,7 @@ const Footer = (props) => {
     const links = [1, 2, 3, 4, 5, 6]
 
     return (
-        <BoxContainer width="100%" height="auto" className="bg-depth-5 padding-top-md padding-bottom-md">
+        <BoxContainer id="footer" width="100%" height="auto" className="bg-depth-5 padding-top-md padding-bottom-md">
             <Container className="flex-column align-items-flex-stretch justify-content-flex-center">
                 <BoxContainer width="auto" height="auto" className="margin-bottom-md">
                     <Title width="300px" depth={1} className="margin-center" />

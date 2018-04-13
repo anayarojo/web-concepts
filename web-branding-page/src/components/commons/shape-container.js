@@ -9,7 +9,7 @@ const ShapeContainer = (props) => {
     }
 
     return (
-        <div style={styles} className = {`shape-container ${props.className}`}>
+        <div id={props.id} style={styles} className = {`shape-container ${props.className}`}>
             {props.children}
         </div>
     )

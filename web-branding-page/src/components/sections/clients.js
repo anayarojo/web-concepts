@@ -11,7 +11,7 @@ const Clients = (props) => {
     const logos = ["box", "ball", "triangle", "box", "ball", "triangle"]
 
     return (
-        <BoxContainer width="100%" height="auto" className="bg-depth-0 padding-top-md padding-bottom-md">
+        <BoxContainer id="clients" width="100%" height="auto" className="bg-depth-0 padding-top-md padding-bottom-md">
             <Container className="flex-column align-items-flex-stretch justify-content-flex-center">
                 <BoxContainer width="auto" height="auto" className="margin-bottom-md">
                     <Title width="300px" depth={3} className="margin-center" />
