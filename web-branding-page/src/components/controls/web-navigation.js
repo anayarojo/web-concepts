@@ -13,11 +13,11 @@ const WebNavigation = (props) => {
 
     return (
         <Control width="600px" height="64px" className={`flex-row align-items-flex-center justify-content-flex-end flex-wrap ${props.className}`}>
-            <ScrollSpy items={props.menu} style={Styles} currentClassName="bg-depth-5">
+            <ScrollSpy items={props.menu} offset={-64} style={Styles} currentClassName="bg-depth-5">
             {
                     props.menu.map((item, index) => {
                     return (
-                        <SpyLink key={`web-link-${index}`} href={item} />
+                        <SpyLink key={`web-link-${index}`} href={`#${item}`} />
                     )
                 })
             }

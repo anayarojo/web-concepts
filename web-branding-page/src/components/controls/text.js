@@ -9,7 +9,7 @@ const Text = (props) => {
             width={props.width}
             height="16px"
             depth={props.depth}
-            className={`${props.className} margin-top-xs margin-bottom-xs`}
+            className={`margin-top-xs margin-bottom-xs ${props.className}`}
         />
     )
 }
