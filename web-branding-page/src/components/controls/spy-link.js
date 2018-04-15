@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Shape from "../commons/shape"
+import * as Win from "../../utilities/windows-utility"
 import "../controls/spy-link.styl"
 
 const SpyLink = (props) => {
@@ -9,8 +10,7 @@ const SpyLink = (props) => {
         event.preventDefault()
         const id = event.target.parentNode.getAttribute("href").replace("#", "")
         const section = document.getElementById(id)
-        const bound = section.getBoundingClientRect();
-        window.scrollBy({ top: bound.top - 64, left: 0, behavior: 'smooth' });
+        Win.scrollTo(section, 64);
     }
 
     const Styles =  {
