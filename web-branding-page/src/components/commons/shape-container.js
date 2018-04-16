@@ -9,7 +9,7 @@ const ShapeContainer = (props) => {
     }
 
     return (
-        <div id={props.id} style={styles} className = {`shape-container ${props.className}`}>
+        <div id={props.id} style={props.styles? props.styles : styles} className = {`shape-container ${props.className}`}>
             {props.children}
         </div>
     )
@@ -18,11 +18,13 @@ const ShapeContainer = (props) => {
 ShapeContainer.prototype = {
     width: PropTypes.string,
     height: PropTypes.string,
+    className: PropTypes.string,
 }
 
 ShapeContainer.defaultProps = {
     width: "100px",
     height: "100px",
+    className: "",
 }
 
 export default ShapeContainer

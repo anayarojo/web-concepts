@@ -10,7 +10,9 @@ const Article = (props) => {
         <Control width="100%" height="auto" className="flex-column align-items-flex-stretch">
             <Title width={props.titleWidth} depth={props.titleDepth} />
             <TextGrup depth={props.textDepth} size={props.textSize} />
-            <Button width="128px" depth={5} />
+            <Control width="100%" height="auto" className="flex-row justify-content-flex-start">
+                <Button width="128px" depth={5} className="" />
+            </Control>
         </Control>
     )
 }
