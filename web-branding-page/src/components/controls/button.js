@@ -3,8 +3,17 @@ import PropTypes from "prop-types"
 import Shape from "../commons/shape"
 
 const Button = (props) => {
+
+    const Styles = {
+        display: "block",
+        width: props.width,
+        height: "64px",
+    }
+
     return (
-        <Shape type="box" width={props.width} height="64px" depth={props.depth} className={`hover-card-3 default-transition ${props.className}`} />
+        <a onClick={props.onClick}>
+            <Shape type="box" width={props.width} height="64px" depth={props.depth} className={`hover-card-3 default-transition ${props.className}`} />
+        </a>
     )
 }
 

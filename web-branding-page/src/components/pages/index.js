@@ -22,7 +22,7 @@ const Index = (props) => {
             <RelatedProducts mobile={props.state.mobile} />
             <Plans mobile={props.state.mobile} />
             <Clients mobile={props.state.mobile} />
-            <Contact mobile={props.state.mobile} />
+            <Contact mobile={props.state.mobile} handleContactSubmit={props.handleContactSubmit} />
             <Footer mobile={props.state.mobile} />
         </div>
     )

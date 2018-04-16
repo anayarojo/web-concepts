@@ -17,7 +17,7 @@ const ContactForm = (props) => {
             <Field width="95%" depth={1} />
             <Text width="100px" depth={3} />
             <TextArea width="95%" depth={1} />
-            <Button width="128px" depth={5} />
+            <Button width="128px" depth={5} onClick={props.handleContactSubmit} />
         </Control>
     )
 }

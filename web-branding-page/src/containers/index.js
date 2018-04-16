@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import IndexPage from "../components/pages/index"
+import ModalContainer from "../containers/modal-container"
+import Modal from "../components/controls/modal"
 
 export default class Index extends Component {
 
@@ -7,6 +9,7 @@ export default class Index extends Component {
         headerFixed: false,
         openedMenu: false,
         mobile: false,
+        showModal: false,
     }
 
     paddingHash = () => {
@@ -44,15 +47,11 @@ export default class Index extends Component {
         })
     }
 
-    animate = (element, animation) => {
-
-        element.classList.remove("animated")
-        element.classList.remove(animation)
-
-        void element.offsetWidth
-
-        element.classList.add("animated")
-        element.classList.add(animation)
+    handleContactSubmit = () => {
+        console.log("click");
+        this.setState({
+            showModal: true
+        })
     }
 
     componentDidMount() {
@@ -73,7 +72,13 @@ export default class Index extends Component {
     render() {
         return (
             <div id="brandingpage-app">
-                <IndexPage state={this.state} />
+                <IndexPage state={this.state} handleContactSubmit={this.handleContactSubmit} />
+                <ModalContainer>
+                {
+                    this.state.showModal &&
+                    <Modal />
+                }
+                </ModalContainer>
             </div>
         )
     }
