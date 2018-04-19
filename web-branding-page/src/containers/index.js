@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import IndexPage from "../components/pages/index"
 import ModalContainer from "../containers/modal-container"
-import Modal from "../components/controls/modal"
+import Modal from "../gadgets/modal"
+import TextGroup from "../components/controls/text-group"
 
 export default class Index extends Component {
 
     state = {
         headerFixed: false,
         openedMenu: false,
-        mobile: false,
         showModal: false,
+        mobile: false,
     }
 
     paddingHash = () => {
@@ -25,15 +26,15 @@ export default class Index extends Component {
     }
 
     handleResize = () => {
-        if (window.innerWidth <= 768){
-            if(!this.state.mobile){
+        if (window.innerWidth <= 768) {
+            if (!this.state.mobile) {
                 this.setState({
                     mobile: true
                 })
             }
         }
         else {
-            if (this.state.mobile){
+            if (this.state.mobile) {
                 this.setState({
                     mobile: false
                 })
@@ -47,10 +48,9 @@ export default class Index extends Component {
         })
     }
 
-    handleContactSubmit = () => {
-        console.log("click");
+    handleToggleModal = () => {
         this.setState({
-            showModal: true
+            showModal: !this.state.showModal
         })
     }
 
@@ -72,13 +72,15 @@ export default class Index extends Component {
     render() {
         return (
             <div id="brandingpage-app">
-                <IndexPage state={this.state} handleContactSubmit={this.handleContactSubmit} />
-                <ModalContainer>
+                <IndexPage state={this.state} handleContactSubmit={this.handleToggleModal} />
                 {
                     this.state.showModal &&
-                    <Modal />
+                    <ModalContainer>
+                        <Modal onCloseRequest={() => this.handleToggleModal()}>
+                            <TextGroup depth={2} />
+                        </Modal>
+                    </ModalContainer>
                 }
-                </ModalContainer>
             </div>
         )
     }
