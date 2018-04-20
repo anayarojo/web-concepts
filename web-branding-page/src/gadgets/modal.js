@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
+import isNil from 'lodash/fp/isNil'
 import Control from "../components/commons/shape-container"
 import IconButton from "../components/controls/icon-button"
 import Button from "../components/controls/button"
 import ModalContainer from "../containers/modal-container"
 
 export default class Modal extends Component {
-
     constructor(props) {
-        super(props)
+        super(props);
         this.handleKeyUp = this.handleKeyUp.bind(this)
         this.handleOutsideClick = this.handleOutsideClick.bind(this)
     }
@@ -73,21 +73,27 @@ export default class Modal extends Component {
     }
 
     render() {
+
+        const {
+            onCloseRequest,
+            children,
+        } = this.props;
+
         return (
-            <a onClick={this.closeModal} style={this.backgroundActionStyle}>
+            <a onClick={onCloseRequest} style={this.backgroundActionStyle}>
                 <Control styles={this.backgroundStyle}>
                     <Control ref={node => (this.modal = node)} width="auto" height="auto" className="bg-depth-1 flex-basis-600 card-5">
                         <Control width="auto" height="auto" className="flex-column flex-align-items-flex-stretch padding-xs">
                             <Control width="100%" height="48px" className="flex-row justify-content-flex-end">
-                                <IconButton onClick={this.closeModal} size={48} depth={5} />
+                                <IconButton onClick={onCloseRequest} size={48} depth={5} />
                             </Control>
                             <Control width="auto" height="auto" className="padding-xs">
                                 {
-                                    this.props.children
+                                    children
                                 }
                             </Control>
                             <Control width="100%" height="48px" className="flex-row justify-content-flex-end">
-                                <Button onClick={this.handleOutsideClick} depth={5} />
+                                <Button onClick={onCloseRequest} depth={5} />
                             </Control>
                         </Control>
                     </Control>
