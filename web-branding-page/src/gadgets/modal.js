@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
+import PropTypes from "prop-types"
+import InjectSheet from 'react-jss'
+import Styles from "./modal-styles"
 import isNil from 'lodash/fp/isNil'
-import Control from "../components/commons/shape-container"
-import IconButton from "../components/controls/icon-button"
-import Button from "../components/controls/button"
-import ModalContainer from "../containers/modal-container"
 
-export default class Modal extends Component {
+class Modal extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.handleKeyUp = this.handleKeyUp.bind(this)
         this.handleOutsideClick = this.handleOutsideClick.bind(this)
     }
@@ -46,59 +45,42 @@ export default class Modal extends Component {
         }
     }
 
-    backgroundActionStyle = {
-        zIndex: "1000",
-        overflowY: "auto",
-        top: "0",
-        left: "0",
-        right: "0",
-        bottom: "0",
-        position: "fixed",
-    }
-
-    backgroundStyle = {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: "1000",
-        overflowY: "auto",
-        overflowX: "hidden",
-        top: "0",
-        left: "0",
-        right: "0",
-        bottom: "0",
-        position: "fixed",
-        backgroundColor: "rgba(0,0,0,0.4)"
-    }
-
     render() {
-
         const {
             onCloseRequest,
             children,
-        } = this.props;
+            sheet: { classes },
+        } = this.props
 
         return (
-            <a onClick={onCloseRequest} style={this.backgroundActionStyle}>
-                <Control styles={this.backgroundStyle}>
-                    <Control ref={node => (this.modal = node)} width="auto" height="auto" className="bg-depth-1 flex-basis-600 card-5">
-                        <Control width="auto" height="auto" className="flex-column flex-align-items-flex-stretch padding-xs">
-                            <Control width="100%" height="48px" className="flex-row justify-content-flex-end">
-                                <IconButton onClick={onCloseRequest} size={48} depth={5} />
-                            </Control>
-                            <Control width="auto" height="auto" className="padding-xs">
-                                {
-                                    children
-                                }
-                            </Control>
-                            <Control width="100%" height="48px" className="flex-row justify-content-flex-end">
-                                <Button onClick={onCloseRequest} depth={5} />
-                            </Control>
-                        </Control>
-                    </Control>
-                </Control>
-            </a>
+            <div className={classes.modalOverlay}>
+                <div
+                    className={classes.modal}
+                    ref={node => (this.modal = node)}
+                >
+                    <div className={classes.modalContent}>
+                        {children}
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    className={classes.closeButton}
+                    onClick={onCloseRequest}
+                />
+            </div>
         )
     }
 }
+
+Modal.propTypes = {
+    onCloseRequest: PropTypes.func,
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
+    ]),
+    sheet: PropTypes.object,
+    classes: PropTypes.object,
+}
+
+export default InjectSheet(Styles)(Modal);

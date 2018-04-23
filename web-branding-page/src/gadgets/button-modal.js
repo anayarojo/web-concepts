@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from "prop-types"
-import Shape from "../components/commons/shape"
-import Modal from "../gadgets/modal"
+import InjectSheet from 'react-jss'
+import Styles from "./buttom-modal-styles"
+import ModalBox from "./modal"
 
-export default class ButtonModal extends Component {
+class ButtonModal extends Component {
     constructor(props) {
         super(props)
         this.state = {
             showModal: false,
-        }
-        this.modalButtonStyle = {
-            display: "block",
-            width: props.width,
-            height: "64px",
         }
     }
 
@@ -23,40 +19,36 @@ export default class ButtonModal extends Component {
     }
 
     render() {
-        const { onClick, width, depth, className, children} = this.props
+        const { buttonLabel, children, sheet: { classes } } = this.props
         const { showModal } = this.state
 
         return (
             <div>
-                <a onClick={onClick} >
-                    <Shape 
-                        type="box" 
-                        width={width} 
-                        height="64px" 
-                        depth={depth} 
-                        className={`hover-card-3 default-transition ${className}`} 
-                    />
-                </a>
-                {showModal &&(
-                    <Modal onCloseRequest={() => this.handleToggleModal()}>
-                        {
-                            children
-                        }
-                    </Modal>
-                )}
+                <button
+                    type="button"
+                    className={classes.modalButton}
+                    onClick={() => this.handleToggleModal()}
+                >
+                    {buttonLabel}
+                </button>
+
+                {showModal &&
+                    <ModalBox onCloseRequest={() => this.handleToggleModal()}>
+                        {children}
+                    </ModalBox>}
             </div>
         )
     }
 }
 
 ButtonModal.prototype = {
-    depth: PropTypes.number,
-    width: PropTypes.string,
-    className: PropTypes.string,
+    buttonLabel: PropTypes.string,
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
+    ]),
+    sheet: PropTypes.object,
+    classes: PropTypes.object,
 }
 
-ButtonModal.defaultProps = {
-    depth: 2,
-    width: "128px",
-    className: "",
-}
+export default InjectSheet(Styles)(ButtonModal)
