@@ -19,7 +19,7 @@ class ButtonModal extends Component {
     }
 
     render() {
-        const { buttonLabel, children, sheet: { classes } } = this.props
+        const { children, sheet: { classes } } = this.props
         const { showModal } = this.state
 
         return (
@@ -29,7 +29,6 @@ class ButtonModal extends Component {
                     className={classes.modalButton}
                     onClick={() => this.handleToggleModal()}
                 >
-                    {buttonLabel}
                 </button>
 
                 {showModal &&
@@ -42,7 +41,6 @@ class ButtonModal extends Component {
 }
 
 ButtonModal.prototype = {
-    buttonLabel: PropTypes.string,
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node,
