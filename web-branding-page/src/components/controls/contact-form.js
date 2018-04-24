@@ -5,8 +5,9 @@ import Title from "../controls/title"
 import Text from "../controls/text"
 import Field from "../controls/field"
 import TextArea from "../controls/text-area"
+import TextGroup from "../controls/text-group"
 import Button from "../controls/button"
-//import ButtonModal from "../../gadgets/button-modal"
+import ButtonModal from "../../gadgets/button-modal"
 
 const ContactForm = (props) => {
     return (
@@ -18,6 +19,9 @@ const ContactForm = (props) => {
             <Field width="95%" depth={1} />
             <Text width="100px" depth={3} />
             <TextArea width="95%" depth={1} />
+            <ButtonModal>
+                <TextGroup depth={3}  />
+            </ButtonModal>
         </Control>
     )
 }

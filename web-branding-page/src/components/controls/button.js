@@ -11,7 +11,7 @@ const Button = (props) => {
     }
 
     return (
-        <a onClick={props.onClick}>
+        <a onClick={props.onClick} style={Styles}>
             <Shape type="box" width={props.width} height="64px" depth={props.depth} className={`hover-card-3 default-transition ${props.className}`} />
         </a>
     )

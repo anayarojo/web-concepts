@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from "prop-types"
-import InjectSheet from 'react-jss'
-import Styles from "./buttom-modal-styles"
-import ModalBox from "./modal"
+import Button from "../components/controls/button"
+import ModalContainer from "./modal-container"
+//import Modal from "./modal"
 
 class ButtonModal extends Component {
     constructor(props) {
@@ -19,34 +19,17 @@ class ButtonModal extends Component {
     }
 
     render() {
-        const { children, sheet: { classes } } = this.props
-        const { showModal } = this.state
-
         return (
-            <div>
-                <button
-                    type="button"
-                    className={classes.modalButton}
-                    onClick={() => this.handleToggleModal()}
-                >
-                </button>
-
-                {showModal &&
-                    <ModalBox onCloseRequest={() => this.handleToggleModal()}>
-                        {children}
-                    </ModalBox>}
+            <div className="button-modal">
+                <Button width="128px" depth={5} onClick={() => this.handleToggleModal()} />
+                {this.state.showModal && (
+                    <ModalContainer onCloseRequest={() => this.handleToggleModal()}>
+                        {this.props.children}
+                    </ModalContainer>
+                )}
             </div>
         )
     }
 }
 
-ButtonModal.prototype = {
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node,
-    ]),
-    sheet: PropTypes.object,
-    classes: PropTypes.object,
-}
-
-export default InjectSheet(Styles)(ButtonModal)
+export default ButtonModal
