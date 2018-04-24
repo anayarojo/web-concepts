@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import IndexPage from "../components/pages/index"
-import ModalContainer from "../containers/modal-container"
-import Modal from "../gadgets/modal"
 import TextGroup from "../components/controls/text-group"
 
 export default class Index extends Component {
@@ -9,7 +7,6 @@ export default class Index extends Component {
     state = {
         headerFixed: false,
         openedMenu: false,
-        showModal: false,
         mobile: false,
     }
 
@@ -72,15 +69,7 @@ export default class Index extends Component {
     render() {
         return (
             <div id="brandingpage-app">
-                <IndexPage state={this.state} handleContactSubmit={this.handleToggleModal} />
-                {
-                    this.state.showModal &&
-                    <ModalContainer>
-                        <Modal onCloseRequest={() => this.handleToggleModal()}>
-                            <TextGroup depth={2} />
-                        </Modal>
-                    </ModalContainer>
-                }
+                <IndexPage state={this.state} />
             </div>
         )
     }

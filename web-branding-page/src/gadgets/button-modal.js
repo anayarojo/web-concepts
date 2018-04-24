@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from "prop-types"
 import Button from "../components/controls/button"
 import ModalContainer from "./modal-container"
-//import Modal from "./modal"
 
 class ButtonModal extends Component {
     constructor(props) {
@@ -23,7 +22,7 @@ class ButtonModal extends Component {
             <div className="button-modal">
                 <Button width="128px" depth={5} onClick={() => this.handleToggleModal()} />
                 {this.state.showModal && (
-                    <ModalContainer onCloseRequest={() => this.handleToggleModal()}>
+                    <ModalContainer buttons={this.props.buttons} onCloseRequest={() => this.handleToggleModal()}>
                         {this.props.children}
                     </ModalContainer>
                 )}
